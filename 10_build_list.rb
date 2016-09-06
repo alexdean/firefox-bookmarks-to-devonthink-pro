@@ -1,5 +1,8 @@
+# usage: `ruby 10_build_list.rb your-bookmarks.json`
+#
 # consumes a firefox JSON bookmarks file and produces CSV representations of the bookmarks
 # HTTP bookmarks are checked for validity
+
 
 require 'json'
 require 'csv'
@@ -179,8 +182,18 @@ def verify(uri_str, limit = 10)
   end
 end
 
+def usage
+  "Usage: #{__FILE__} your-bookmarks.json"
+end
+
 if ARGV[0].nil?
-  puts "usage #{__FILE__} ff-bookmarks-file.json"
+  puts usage
+  exit
+end
+
+if !File.exist?(ARGV[0])
+  puts usage
+  puts "  ''your-bookmarks.json' should be a JSON bookmarks backup exported from Firefox."
   exit
 end
 

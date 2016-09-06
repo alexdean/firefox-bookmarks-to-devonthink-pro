@@ -1,7 +1,11 @@
+# usage: `ruby 15_add_review_tag.rb`
+#
 # add a 'needs-review' tag to all bookmarks
 # in the CSV files created by 10_build_list.rb
 #
-# separate script because this should be an optional step
+# run that script to completion before using this one.
+#
+# this is a separate script because this should be an optional step
 
 require 'csv'
 

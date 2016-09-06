@@ -4,6 +4,9 @@
   1. Run numbered scripts in order. Read individual files for more information
      on what they do.
 
+`*.scpt` files should be open in the OSX `Script Editor` application and
+executed from there.
+
 ## WARNING
 
 This is alpha code. I've used it personally to import my collection of FF
